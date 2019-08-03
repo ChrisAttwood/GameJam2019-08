@@ -18,6 +18,8 @@ public class Barrel : MonoBehaviour
 
     public static Barrel instance;
 
+    public bool Spinning = false;
+
     private void Awake()
     {
         instance = this;
@@ -49,7 +51,7 @@ public class Barrel : MonoBehaviour
             Queued[Index].OnStart();
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space)&&!Spinning)
         {
             Queued[Index].OnUse();
         }
@@ -58,13 +60,37 @@ public class Barrel : MonoBehaviour
         {
             Cycle();
             AudioEffects.instance.PlayEffect(LiftSoundEffects[Random.Range(0, LiftSoundEffects.Length)], 0.5f, 1f);
-            Clown.instance.Rigidbody2D.velocity = Vector3.zero;
+
+            if (!Spinning)
+            {
+                Clown.instance.Rigidbody2D.velocity = Vector3.zero;
+            }
+
+           
             Queued[Index].OnStop();
+        }
+
+        if (Spinning)
+        {
+            Clown.instance.Rigidbody2D.velocity = new Vector2((Mathf.PerlinNoise(Time.time, 0f) - 0.5f)*20f, (Mathf.PerlinNoise(Time.time, 100f) - 0.5f)*20f);
         }
 
         
 
     }
+
+    public void Spin()
+    {
+        Spinning = true;
+        Clown.instance.Direction = Direction.Spin;
+        Invoke("ReturnControl", 1f);
+    }
+
+    void ReturnControl()
+    {
+        Spinning = false;
+    }
+
 
     void Cycle()
     {

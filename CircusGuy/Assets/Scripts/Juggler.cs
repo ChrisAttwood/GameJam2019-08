@@ -18,13 +18,23 @@ public class Juggler : MonoBehaviour
     int CurrentFrame;
     public int FramesPerFrame = 10;
 
+    public AudioClip AudioClip;
+
+
+    public Color[] Colors;
+
+
     private void Start()
     {
-        Body.color = new Color(Tone(), Tone(), Tone());
-        Hair.color = new Color(Tone(), Tone(), Tone());
-        Arm.color = new Color(Tone(), Tone(), Tone());
-        Ball.color = new Color(Tone(), Tone(), Tone());
-       
+        //Body.color = new Color(Tone(), Tone(), Tone());
+        //Hair.color = new Color(Tone(), Tone(), Tone());
+        //Arm.color = new Color(Tone(), Tone(), Tone());
+        //Ball.color = new Color(Tone(), Tone(), Tone());
+        Body.color = Colors[Random.Range(0, Colors.Length)];
+        Hair.color = Colors[Random.Range(0, Colors.Length)];
+        Arm.color = Colors[Random.Range(0, Colors.Length)];
+        Ball.color = Colors[Random.Range(0, Colors.Length)];
+
     }
 
     float Tone()
@@ -58,4 +68,14 @@ public class Juggler : MonoBehaviour
 
     }
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        
+
+        Barrel.instance.Spin();
+        AudioEffects.instance.PlayEffect(AudioClip, 1f, 1f);
+       
+    }
 }

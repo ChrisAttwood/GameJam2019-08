@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8533938731392508353}
   - component: {fileID: 5638404052690904065}
   - component: {fileID: 5120080722633922627}
+  - component: {fileID: 4063876539210528682}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9790ae4d4d2cbe44aa60aa05fc1d0e13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb1b9df0c7432be4184f0626db02c236, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,14 +99,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.5, y: 1.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &5120080722633922627
 MonoBehaviour:
@@ -123,3 +124,22 @@ MonoBehaviour:
     type: 3}
   CollideEffects:
   - {fileID: 8300000, guid: 0480a8aea2d82074db923d9a9d78ba6b, type: 3}
+--- !u!95 &4063876539210528682
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132766532646678818}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 772da6fde80ad1747a6c7afe707464b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

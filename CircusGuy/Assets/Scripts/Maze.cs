@@ -5,19 +5,21 @@ using UnityEngine;
 public class Maze : MonoBehaviour
 {
    
-    public GameObject[] Items;
-    public Sprite[] Maps;
+    //public GameObject[] Items;
+    //public Sprite[] Maps;
 
 
     private void Start()
     {
-        Create();
+      //  Create();
     }
 
 
 
 
-    void Create()
+
+
+    public void Create(Level level)
     {
 
         int bCount = 0;
@@ -25,16 +27,16 @@ public class Maze : MonoBehaviour
         {
             for (int y = 0; y < 32; y++)
             {
-                for (int i = 0; i < Maps.Length; i++)
+                for (int i = 0; i < level.Maps.Length; i++)
                 {
-                    if (Maps[i].texture.GetPixel(x, y).a > 0f)
+                    if (level.Maps[i].texture.GetPixel(x, y).a > 0f)
                     {
-                        if (i == 1)
+                        if (i == level.BalloonLayer)
                         {
                             bCount++;
                         }
 
-                        var p = Instantiate(Items[i], transform);
+                        var p = Instantiate(level.Items[i], transform);
                         p.transform.position = new Vector2(x - 16, y - 16);
                     }
                 }

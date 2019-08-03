@@ -31,10 +31,9 @@ public class Water : MonoBehaviour
     {
         Effect.gameObject.SetActive(true);
         var pos = Clown.instance.transform.position;
-        pos.y -= 0.5f;
+        pos.y -= 1f;
 
         Effect.transform.position = pos;
-        Debug.Log("x");
         Clown.instance.MoveMod = 0.1f;
     }
 

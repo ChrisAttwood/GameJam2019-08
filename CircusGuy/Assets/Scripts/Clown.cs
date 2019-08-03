@@ -10,6 +10,7 @@ public class Clown : MonoBehaviour
     public Sprite[] Right;
     public Sprite[] Up;
     public Sprite[] Down;
+    public Sprite[] Spin;
     public SpriteRenderer SpriteRenderer;
 
     public Direction Direction;
@@ -21,6 +22,9 @@ public class Clown : MonoBehaviour
     int AnIndex;
     int CurrentFrame;
     public int FramesPerFrame = 10;
+
+
+   
 
     private void Update()
     {
@@ -67,18 +71,32 @@ public class Clown : MonoBehaviour
                 }
                 SpriteRenderer.sprite = Right[AnIndex];
                 break;
+            case Direction.Spin:
+                if (AnIndex >= Spin.Length)
+                {
+                    AnIndex = 0;
+                }
+                SpriteRenderer.sprite = Spin[AnIndex];
+                break;
 
         }
 
 
     }
 
+    
+
 
 
     private void Awake()
     {
         instance = this;
+      
     }
 
-   
+    private void Start()
+    {
+        transform.position = (Vector2)GameManager.instance.CurrentLevel().StartPosition;
+    }
+
 }

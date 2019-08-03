@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: b8082370a93b0e046bb94989755fda02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e429df55f32db44493f20fe9612a2cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,15 +97,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rigidbody2D: {fileID: 1922459069391941203}
   Left:
-  - {fileID: 21300000, guid: fdfa92dd298ca35439774279cd3dc4e1, type: 3}
-  - {fileID: 21300000, guid: c3564efd2ed9c29479a753553e3d98c3, type: 3}
+  - {fileID: 21300000, guid: b10663ff0a105704bb73c824b85dcec4, type: 3}
+  - {fileID: 21300000, guid: 97f1475d80ec14446b663f64b2772d55, type: 3}
   Right:
-  - {fileID: 21300000, guid: c5808298570fc54438b48f084ac6e2db, type: 3}
-  - {fileID: 21300000, guid: 91e2d02ed523d3b45b65e7d934c3e1c2, type: 3}
+  - {fileID: 21300000, guid: 81a96daba4d44f14182bb1c23b91f97f, type: 3}
+  - {fileID: 21300000, guid: 1404e1e866e9b8748b311d1cd6d00324, type: 3}
   Up:
-  - {fileID: 21300000, guid: 321c4cd68c7e92d4e8cd97ff6a003aba, type: 3}
+  - {fileID: 21300000, guid: ff4b8b01d8fa33648b142e6697bbcbf8, type: 3}
+  - {fileID: 21300000, guid: 71574aad52e506e4183ff2e16b0c02b0, type: 3}
   Down:
-  - {fileID: 21300000, guid: b8082370a93b0e046bb94989755fda02, type: 3}
+  - {fileID: 21300000, guid: 7e429df55f32db44493f20fe9612a2cd, type: 3}
+  - {fileID: 21300000, guid: e2b852a9ef465d74f9cdbe47361a3a49, type: 3}
+  Spin:
+  - {fileID: 21300000, guid: 7e429df55f32db44493f20fe9612a2cd, type: 3}
+  - {fileID: 21300000, guid: 97f1475d80ec14446b663f64b2772d55, type: 3}
+  - {fileID: 21300000, guid: 71574aad52e506e4183ff2e16b0c02b0, type: 3}
+  - {fileID: 21300000, guid: 81a96daba4d44f14182bb1c23b91f97f, type: 3}
   SpriteRenderer: {fileID: 1922459069391941207}
   Direction: 2
   MoveMod: 1
@@ -144,18 +151,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.4}
+  m_Offset: {x: 0, y: -0.9}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.15}
+  m_Size: {x: 0.2, y: 0.15}
   m_EdgeRadius: 0
 --- !u!1 &1922459070416957311
 GameObject:
@@ -182,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922459070416957311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1922459069391941200}

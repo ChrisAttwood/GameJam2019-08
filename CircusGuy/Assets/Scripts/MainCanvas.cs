@@ -13,7 +13,7 @@ public class MainCanvas : MonoBehaviour
     public TMP_Text TimeText;
     public TMP_Text BalloonText;
 
-    int Score = 0;
+    public int Score = 0;
 
     public int BalloonCount;
     public int TotalBaloons;
@@ -44,16 +44,32 @@ public class MainCanvas : MonoBehaviour
     {
         BalloonCount++;
         DisplayBaloons();
+        if (BalloonCount>= GameManager.instance.CurrentLevel().BalloonsRequired)
+        {
+            GameManager.instance.EndLevel();
+        }
+
+       
     }
 
     public void DisplayBaloons()
     {
-        BalloonText.text = string.Format("{0}/{1}", BalloonCount, TotalBaloons);
+        BalloonText.text = string.Format("{0}/{1}", BalloonCount, GameManager.instance.CurrentLevel().BalloonsRequired);
     }
 
     private void Update()
     {
-        TimeText.text = (limit - sw.Elapsed).ToString("mm':'ss");
+       
+        if (sw.Elapsed > limit)
+        {
+            GameManager.instance.GameOver();
+        }
+        else
+        {
+            TimeText.text = (limit - sw.Elapsed).ToString("mm':'ss");
+        }
+
+        
     }
 
     private void Awake()

@@ -38,7 +38,7 @@ public class MoveAction : Action
 
         var skid = Instantiate(Skid);
         var pos = Clown.instance.transform.position;
-        pos.y -= 0.5f;
+        pos.y -= 1f;
         skid.transform.position = pos;
     }
 
