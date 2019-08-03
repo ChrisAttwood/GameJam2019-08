@@ -9,40 +9,67 @@ public class Barrel : MonoBehaviour
 
     public int Index;
 
-    public AudioClip ChangeSoundEffect;
+    public AudioClip[] ChangeSoundEffects;
+    public AudioClip[] LiftSoundEffects;
+    
 
-    // Start is called before the first frame update
+
+    public List<Action> Queued;
+
+    public static Barrel instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
+
+        Queued = new List<Action>();
+
+
+        for(int i = 0; i < 99; i++)
+        {
+            Queued.Add(Actions[Random.Range(0, Actions.Count)]);
+        }
+
+
+
         Cycle();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Cycle();
+            AudioEffects.instance.PlayEffect(ChangeSoundEffects[Random.Range(0, ChangeSoundEffects.Length)], 0.5f,1f);
+            
+            Queued[Index].OnStart();
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
-            Actions[Index].OnUse();
+            Queued[Index].OnUse();
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            Cycle();
+            AudioEffects.instance.PlayEffect(LiftSoundEffects[Random.Range(0, LiftSoundEffects.Length)], 0.5f, 1f);
             Clown.instance.Rigidbody2D.velocity = Vector3.zero;
+            Queued[Index].OnStop();
         }
 
-
+        
 
     }
 
     void Cycle()
     {
         Index++;
-        if(Index>= Actions.Count)
+        if(Index>= Queued.Count)
         {
             Index = 0;
         }
@@ -61,14 +88,16 @@ public class Barrel : MonoBehaviour
         int i = index;
         if (i < 0)
         {
-            i = Actions.Count + i;
+            i = Queued.Count + i;
         }
 
-        if (i >= Actions.Count)
+        if (i >= Queued.Count)
         {
-            i = i - Actions.Count;
+            i = i - Queued.Count;
         }
 
-        return Actions[i];
+        return Queued[i];
     }
+
+   
 }

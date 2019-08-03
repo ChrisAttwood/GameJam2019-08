@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1852dbaa2a92f418a60e4196e93211, type: 3}
   m_Name: MoveDown
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: b8082370a93b0e046bb94989755fda02, type: 3}
+  Icon: {fileID: 21300000, guid: d5f10c7b3d0cef741b3f8214f41c8faa, type: 3}
   Direction: {x: 0, y: -1}
   Speed: 5
+  Skid: {fileID: 5214142381664892506, guid: da8e2faa26a6f5c489a2c16628d891fe, type: 3}
+  LookDirection: 2

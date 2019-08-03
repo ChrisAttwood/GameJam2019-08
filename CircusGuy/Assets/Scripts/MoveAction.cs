@@ -9,21 +9,37 @@ public class MoveAction : Action
     public float Speed = 5f;
 
     public GameObject Skid;
+    public Direction LookDirection;
 
     public override void OnUse()
     {
 
-        Clown.instance.Rigidbody2D.velocity = (Direction) * Speed;
-
+        Clown.instance.Rigidbody2D.velocity = (Direction) * Speed * Clown.instance.MoveMod;
+        Clown.instance.Direction = LookDirection;
         base.OnUse();
     }
 
-    public override void OnSelect()
+    public override void OnStart()
     {
-       // var skid = Instantiate(Skid);
 
+        SkidEffect();
 
-        base.OnSelect();
+        base.OnStart();
+    }
+
+    public override void OnStop()
+    {
+        SkidEffect();
+        base.OnStop();
+    }
+
+    void SkidEffect()
+    {
+
+        var skid = Instantiate(Skid);
+        var pos = Clown.instance.transform.position;
+        pos.y -= 0.5f;
+        skid.transform.position = pos;
     }
 
 }

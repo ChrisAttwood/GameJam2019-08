@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3536273602568989402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3536273602568989404}
+  - component: {fileID: 3536273602568989403}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3536273602568989404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536273602568989402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3536273602568989403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536273602568989402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00985cba931f764082aa24197d7876a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SizeX: 16
+  SizeY: 16
+  Tiles:
+  - {fileID: 1265557101975493379, guid: 2da469864a8103944870e9d47f460f49, type: 3}
+  - {fileID: 6736529995027624068, guid: b4a7534c529ae2d4aa5ac662959ede70, type: 3}
+  - {fileID: 7542086896156954179, guid: f8aa8cb565d010c408641737d7491805, type: 3}
+  - {fileID: 956449819116673306, guid: 6f77ba27f7b4c2b4da7eadc8fd58ac48, type: 3}
+  - {fileID: 3875175130568671875, guid: 37d0e7825f10ab94d879a3b3ab1b12b6, type: 3}

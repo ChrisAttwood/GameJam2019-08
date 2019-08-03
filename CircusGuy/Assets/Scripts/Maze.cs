@@ -4,29 +4,44 @@ using UnityEngine;
 
 public class Maze : MonoBehaviour
 {
-    public GameObject Wall;
-    public Sprite WallMap;
+   
+    public GameObject[] Items;
+    public Sprite[] Maps;
 
-    private void Awake()
+
+    private void Start()
     {
         Create();
     }
 
 
+
+
     void Create()
     {
-        for(int x= 0; x < 32; x++)
+
+        int bCount = 0;
+        for (int x = 0; x < 32; x++)
         {
             for (int y = 0; y < 32; y++)
             {
-                if(WallMap.texture.GetPixel(x,y) == Color.black)
+                for (int i = 0; i < Maps.Length; i++)
                 {
-                    var p = Instantiate(Wall, transform);
-                    p.transform.position = new Vector2(x-16, y-16);
+                    if (Maps[i].texture.GetPixel(x, y).a > 0f)
+                    {
+                        if (i == 1)
+                        {
+                            bCount++;
+                        }
+
+                        var p = Instantiate(Items[i], transform);
+                        p.transform.position = new Vector2(x - 16, y - 16);
+                    }
                 }
             }
         }
-    }
 
-    
+        MainCanvas.instance.TotalBaloons = bCount;
+        MainCanvas.instance.DisplayBaloons();
+    }
 }

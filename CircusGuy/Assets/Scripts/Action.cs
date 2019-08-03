@@ -5,15 +5,22 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Action : ScriptableObject
 {
-
+    
     public Sprite Icon;
+
+   
+
+    public virtual void OnStart()
+    {
+
+    }
 
     public virtual void OnUse()
     {
 
     }
 
-    public virtual void OnSelect()
+    public virtual void OnStop()
     {
 
     }
