@@ -44,6 +44,10 @@ public class Barrel : MonoBehaviour
     
     void Update()
     {
+
+
+        if (GameManager.instance.LevelEnded) return;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             AudioEffects.instance.PlayEffect(ChangeSoundEffects[Random.Range(0, ChangeSoundEffects.Length)], 0.5f,1f);

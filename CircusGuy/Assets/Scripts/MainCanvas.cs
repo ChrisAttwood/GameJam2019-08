@@ -23,6 +23,7 @@ public class MainCanvas : MonoBehaviour
 
     System.TimeSpan limit;
 
+    
 
     private void Start()
     {
