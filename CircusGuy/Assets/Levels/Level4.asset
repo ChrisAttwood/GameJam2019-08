@@ -26,4 +26,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9d226f44d3887dc43ae49d4ccebe98d9, type: 3}
   BalloonLayer: 1
   StartPosition: {x: 0, y: -10}
-  BalloonsRequired: 3
+  BalloonsRequired: 20

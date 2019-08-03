@@ -17,11 +17,13 @@ MonoBehaviour:
   - {fileID: 8323878922851357675, guid: dd7e3f84aed035c4fab11700a16eff50, type: 3}
   - {fileID: 7132766532646678818, guid: 38d5fa9ebb6f10d4e99468f5c2b291c6, type: 3}
   - {fileID: 6956006303612304760, guid: 1757984a26c6ccb46b55e73512f6b07f, type: 3}
+  - {fileID: 637182406590082470, guid: 44191a4560107bb4b9501055c15761d8, type: 3}
   Maps:
   - {fileID: 21300000, guid: 2c3dc19726e633044b413452e1e5a2c5, type: 3}
   - {fileID: 21300000, guid: 7090f6a225d814f4cb1a54a04614ee8c, type: 3}
   - {fileID: 21300000, guid: 142b445cb6abae64cafcdb07200ef1bc, type: 3}
   - {fileID: 21300000, guid: 413ba768ec3e9c74b9c80f3342b035b5, type: 3}
+  - {fileID: 21300000, guid: 6ee038c432ce8b74aa130a06acf1c59b, type: 3}
   BalloonLayer: 1
   StartPosition: {x: 0, y: 0}
-  BalloonsRequired: 3
+  BalloonsRequired: 20

@@ -1689,7 +1689,7 @@ PrefabInstance:
     - target: {fileID: 8132180583488445944, guid: 6d4d991e1871cb94abb84f07b9543685,
         type: 3}
       propertyPath: Levels.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8132180583488445944, guid: 6d4d991e1871cb94abb84f07b9543685,
         type: 3}
@@ -1711,5 +1711,35 @@ PrefabInstance:
       propertyPath: WinGameCanvas
       value: 
       objectReference: {fileID: 252033540}
+    - target: {fileID: 8132180583488445944, guid: 6d4d991e1871cb94abb84f07b9543685,
+        type: 3}
+      propertyPath: Levels.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 87336ee61773d8c49b394c8957c7f136,
+        type: 2}
+    - target: {fileID: 8132180583488445944, guid: 6d4d991e1871cb94abb84f07b9543685,
+        type: 3}
+      propertyPath: Levels.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: c1e2a743860738943b8261f53926a85d,
+        type: 2}
+    - target: {fileID: 8132180583488445944, guid: 6d4d991e1871cb94abb84f07b9543685,
+        type: 3}
+      propertyPath: Levels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c1e2a743860738943b8261f53926a85d,
+        type: 2}
+    - target: {fileID: 8132180583488445944, guid: 6d4d991e1871cb94abb84f07b9543685,
+        type: 3}
+      propertyPath: Levels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6200631d1d7eb314c8d318c6343fdef3,
+        type: 2}
+    - target: {fileID: 8132180583488445944, guid: 6d4d991e1871cb94abb84f07b9543685,
+        type: 3}
+      propertyPath: Levels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: fdb6c1725dbc8cd42a86670ce39f97be,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d4d991e1871cb94abb84f07b9543685, type: 3}
