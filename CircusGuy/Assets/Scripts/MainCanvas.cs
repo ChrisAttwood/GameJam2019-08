@@ -60,17 +60,18 @@ public class MainCanvas : MonoBehaviour
 
     private void Update()
     {
-       
-        if (sw.Elapsed > limit)
+        if (!GameManager.instance.LevelEnded)
         {
-            GameManager.instance.GameOver();
-        }
-        else
-        {
-            TimeText.text = (limit - sw.Elapsed).ToString("mm':'ss");
-        }
+            if (sw.Elapsed > limit)
+            {
+                GameManager.instance.GameOver();
+            }
+            else
+            {
+                TimeText.text = (limit - sw.Elapsed).ToString("mm':'ss");
+            }
 
-        
+        }
     }
 
     private void Awake()
